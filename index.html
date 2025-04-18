@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiTrade AI - Next-Gen Investing</title>
+    <style>
+        :root {
+            --primary-color: #0F0F0F; /* Rich black */
+            --secondary-color: #2D2D2D; /* Warm gray */
+            --accent-color: #00D4FF; /* Electric cyan */
+            --text-primary: #E5E5E5; /* Off-white */
+            --text-secondary: #A1A1A1; /* Muted gray */
+            --background-color: #0F0F0F;
+            --card-background: #2D2D2D;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-regular: 400;
+            --font-semibold: 600;
+            --font-bold: 700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1A1A1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: var(--font-bold);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            background: linear-gradient(45deg, var(--text-primary), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-secondary);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.2rem 3rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: var(--font-semibold);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+        }
+
+        .cta-button:hover {
+            background-color: #00B8E6;
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button svg {
+            margin-left: 0.75rem;
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover svg {
+            transform: translateX(5px);
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--accent-color);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: drift 8s ease-in-out infinite;
+        }
+
+        .particle-1 {
+            width: 12px;
+            height: 12px;
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .particle-2 {
+            width: 8px;
+            height: 8px;
+            top: 70%;
+            right: 12%;
+            animation-delay: 1.5s;
+        }
+
+        .particle-3 {
+            width: 10px;
+            height: 10px;
+            bottom: 20%;
+            left: 25%;
+            animation-delay: 3s;
+        }
+
+        .particle-4 {
+            width: 14px;
+            height: 14px;
+            top: 40%;
+            right: 20%;
+            animation-delay: 4.5s;
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(20px, -15px); }
+            50% { transform: translate(-15px, 20px); }
+            75% { transform: translate(10px, -10px); }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="floating-particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+        </div>
+        <div class="hero-content">
+            <h1>OptiTrade AI</h1>
+            <p>Elevate your investments with AI-powered market insights.</p>
+            <a href="https://optitrade-ai.github.io/stock-analysis/amazon/" class="cta-button">
+                Explore Stock Analysis
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>
