@@ -7,10 +7,9 @@
     <title>Amazon.com, Inc. (AMZN) Analysis Dashboard</title>
     <style>
         :root {
-            --primary-color: #FF9900;
-            /* Amazon orange */
+            --primary-color: #FF9900; /* Amazon orange */
             --primary-dark: #E68A00;
-            --primary-light: #FFB84D;
+            --primary-light: #FFAD33;
             --secondary-color: #222222;
             --accent-color: #303030;
             --buy-color: #00C805;
@@ -196,7 +195,7 @@
 
         .grid-2 {
             grid-template-columns: repeat(2, 1fr);
- E        }
+        }
 
         .grid-3 {
             grid-template-columns: repeat(3, 1fr);
@@ -257,7 +256,6 @@
             margin-right: var(--spacing-xs);
         }
 
-        /* Key metrics styling */
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -305,7 +303,6 @@
             color: var(--sell-color);
         }
 
-        /* Technical indicators styling */
         .indicator-value {
             font-size: 1.8rem;
             font-weight: var(--font-bold);
@@ -328,7 +325,6 @@
             margin-bottom: var(--spacing-md);
         }
 
-        /* RSI Bar */
         .rsi-container {
             margin: var(--spacing-md) 0;
         }
@@ -371,8 +367,7 @@
             height: 32px;
             background-color: var(--secondary-color);
             top: -4px;
-            left: 37.94%;
-            /* RSI value position */
+            left: 37.97%;
             z-index: 3;
         }
 
@@ -383,7 +378,7 @@
             background-color: var(--secondary-color);
             border-radius: 50%;
             bottom: -4px;
-            left: 37.94%;
+            left: 37.97%;
             transform: translateX(-4px);
             z-index: 4;
         }
@@ -400,7 +395,6 @@
             font-weight: var(--font-medium);
         }
 
-        /* Moving Averages Table */
         .data-table {
             width: 100%;
             border-collapse: separate;
@@ -451,7 +445,6 @@
             font-weight: var(--font-semibold);
         }
 
-        /* SWOT Grid Styling */
         .swot-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -519,7 +512,6 @@
             color: var(--accent-color);
         }
 
-        /* Recommendation Styling */
         .recommendation-badge {
             display: inline-flex;
             align-items: center;
@@ -582,7 +574,6 @@
             font-size: 0.95rem;
         }
 
-        /* Risk Assessment Cards */
         .risk-card {
             height: 100%;
             transition: var(--transition);
@@ -660,7 +651,6 @@
             margin-right: var(--spacing-xs);
         }
 
-        /* Bollinger Bands Styling */
         .bollinger-container {
             margin: var(--spacing-md) 0;
         }
@@ -675,7 +665,6 @@
             overflow: hidden;
         }
 
-        /* Content Section Styling */
         .content-section {
             margin-bottom: var(--spacing-lg);
         }
@@ -710,7 +699,6 @@
             font-style: italic;
         }
 
-        /* Media Queries */
         @media (max-width: 1000px) {
             .metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -758,7 +746,7 @@
                 <img class="logo" src="/stock-analysis/icons/amazon-icon.png" alt="AMZN Logo">
                 <div class="company-info">
                     <div class="company-ticker">NASDAQ: AMZN</div>
-                    <h1>Amazon.com Analysis</h1>
+                    <h1>Amazon Analysis</h1>
                 </div>
             </div>
             <div class="date-display">
@@ -770,7 +758,7 @@
                         d="M12 13C11.45 13 11 13.45 11 14C11 14.55 11.45 15 12 15C12.55 15 13 14.55 13 14C13 13.45 12.55 13 12 13Z"
                         fill="#606060" />
                 </svg>
-                April 17, 2025
+                April 18, 2025
             </div>
         </div>
 
@@ -789,32 +777,32 @@
                 <div class="metric-card">
                     <div class="metric-label">Current Price</div>
                     <div class="metric-value">$172.61</div>
-                    <div class="metric-trend trend-down">-0.69% (1d)</div>
+                    <div class="metric-trend trend-down">-14.5% (50-day SMA)</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">Market Cap</div>
-                    <div class="metric-value">$1.93T</div>
-                    <div class="metric-trend">As of Apr 17</div>
+                    <div class="metric-value">$1.96T</div>
+                    <div class="metric-trend">As of April 18, 2025</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">RSI (14-day)</div>
-                    <div class="metric-value">37.94</div>
+                    <div class="metric-value">37.97</div>
                     <div class="metric-trend">Approaching oversold</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-label">50-Day SMA</div>
-                    <div class="metric-value">$201.87</div>
-                    <div class="metric-trend trend-down">-14.5%</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-label">200-Day SMA</div>
-                    <div class="metric-value">$199.83</div>
-                    <div class="metric-trend trend-down">-13.6%</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">MACD</div>
                     <div class="metric-value">-7.25</div>
-                    <div class="metric-trend">Negative momentum</div>
+                    <div class="metric-trend trend-down">Bearish momentum</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Trading Volume</div>
+                    <div class="metric-value">44.7M</div>
+                    <div class="metric-trend">High activity</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">P/E Ratio</div>
+                    <div class="metric-value">Below historical avg</div>
+                    <div class="metric-trend">Attractive valuation</div>
                 </div>
             </div>
         </div>
@@ -831,14 +819,13 @@
                 </div>
                 <div class="card-header-text">Industry Leadership</div>
             </div>
-            <p>Amazon.com, Inc. is a diversified technology company with significant market presence in <strong>e-commerce</strong>, <strong>cloud computing (AWS)</strong>, <strong>digital advertising</strong>, and emerging technologies. Founded in 1997 and headquartered in Seattle, Washington, Amazon employs over 1.5 million people worldwide and has a market capitalization of approximately $1.93 trillion.</p>
-            <p>Amazon's core e-commerce business accounts for approximately <strong>75% of revenue</strong>, while AWS, contributing <strong>15% of revenue</strong>, is the primary profit driver due to its high margins. The fast-growing advertising segment, representing <strong>5-10% of revenue</strong>, is another high-margin business. Amazon is also investing heavily in AI, healthcare, and projects like <strong>Project Kuiper</strong>, a satellite internet initiative to compete with Starlink.</p>
-            <p>Recent news highlights Amazon's leadership in cloud computing with AWS holding a <strong>31% global market share</strong>. The company's substantial investments in AI infrastructure, estimated at <strong>$100 billion in 2025</strong>, position it to capitalize on the growing demand for AI and cloud services. Despite a recent stock correction of <strong>20-25% from all-time highs</strong>, analysts note Amazon's attractive valuation and potential for significant upside.</p>
+            <p>Amazon.com, Inc. is a global technology leader with dominant positions in <strong>e-commerce</strong> and <strong>cloud computing</strong> through Amazon Web Services (AWS), which holds a 31% global market share. The company also operates in digital advertising and consumer electronics, employing over <strong>1.5 million people</strong> worldwide.</p>
+            <p>Amazon's diversified revenue streams, including high-margin businesses like AWS and advertising, provide resilience against economic challenges. The company is investing heavily in <strong>artificial intelligence (AI)</strong>, with plans for ~$100 billion in AI infrastructure spending in 2025, positioning it to capitalize on the AI revolution.</p>
+            <p>Recent financial performance shows <strong>strong cash flow generation</strong> and expanding profit margins, driven by growth in AWS and advertising. Amazon's focus on international expansion, particularly in emerging markets, further enhances its long-term growth potential.</p>
         </div>
 
         <h2>Technical Analysis</h2>
         <div class="grid grid-2">
-            <!-- First Card: RSI & Moving Averages -->
             <div class="card">
                 <div class="card-header">
                     <div class="card-header-icon">
@@ -853,7 +840,7 @@
                     <div class="card-header-text">RSI & Moving Averages</div>
                 </div>
                 <div class="indicator-value">
-                    37.94<span class="indicator-value-unit">RSI</span>
+                    37.97<span class="indicator-value-unit">RSI</span>
                 </div>
                 <div class="indicator-label">Relative Strength Index (14-day)</div>
                 <div class="rsi-container">
@@ -871,7 +858,7 @@
                         <span>100</span>
                     </div>
                 </div>
-                <p>RSI at 37.94 indicates the stock is approaching oversold territory, suggesting a potential technical bounce may be imminent.</p>
+                <p>RSI at 37.97 indicates the stock is approaching oversold territory, suggesting a potential technical bounce may be imminent.</p>
 
                 <table class="data-table">
                     <thead>
@@ -910,7 +897,6 @@
                 </table>
             </div>
 
-            <!-- Second Card: Bollinger Bands -->
             <div class="card">
                 <div class="card-header">
                     <div class="card-header-icon">
@@ -935,50 +921,42 @@
 
                 <div class="bollinger-container">
                     <div class="bollinger-bands">
-                        <!-- Gradient Background -->
                         <div
                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%); z-index: 1;">
                         </div>
 
-                        <!-- Bollinger Upper Band -->
                         <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: 2;">
                             <path d="M0,20 C50,15 100,12 150,10 C200,8 250,10 300,12" stroke="var(--text-lighter)"
                                 stroke-width="1.5" fill="none" />
                         </svg>
 
-                        <!-- Bollinger Middle Band (SMA) -->
                         <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: 3;">
                             <path d="M0,50 C50,48 100,45 150,48 C200,51 250,53 300,50" stroke="var(--primary-color)"
                                 stroke-width="2" fill="none" />
                         </svg>
 
-                        <!-- Bollinger Lower Band -->
                         <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: 2;">
                             <path d="M0,80 C50,78 100,75 150,78 C200,81 250,83 300,80" stroke="var(--text-lighter)"
                                 stroke-width="1.5" fill="none" />
                         </svg>
 
-                        <!-- Price Line -->
                         <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: 5;">
                             <path
                                 d="M0,65 C30,70 60,78 90,85 C120,92 150,95 180,90 C210,85 240,88 270,92 C285,94 300,95"
                                 stroke="var(--sell-color)" stroke-width="2.5" fill="none" />
-                            <!-- Current Price Marker -->
                             <circle cx="300" cy="94" r="5" fill="var(--sell-color)" />
                         </svg>
 
-                        <!-- Bands Fill -->
                         <div
                             style="position: absolute; top: 10px; left: 0; width: 100%; height: 70px; background-color: rgba(255, 153, 0, 0.05); z-index: 1; border-radius: 4px;">
                         </div>
 
-                        <!-- Labels -->
                         <div
                             style="position: absolute; top: 10px; left: 8px; font-size: 0.7rem; color: var(--text-lighter); z-index: 6;">
-                            Upper Band ($209.91)</div>
+                            Upper Band ($237.65)</div>
                         <div
                             style="position: absolute; top: 48px; left: 8px; font-size: 0.7rem; color: var(--primary-color); font-weight: var(--font-medium); z-index: 6;">
-                            SMA ($187.00)</div>
+                            SMA ($200.87)</div>
                         <div
                             style="position: absolute; top: 78px; left: 8px; font-size: 0.7rem; color: var(--text-lighter); z-index: 6;">
                             Lower Band ($164.09)</div>
@@ -987,19 +965,20 @@
                             $172.61</div>
                     </div>
 
-                    <!-- Bollinger Values -->
                     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-sm);">
                         <div
                             style="display: flex; flex-direction: column; align-items: center; background-color: var(--card-highlight); padding: var(--spacing-sm); border-radius: var(--border-radius-sm);">
                             <span
-                                style="font-size: 0.8rem; color: var(--text-lighter); margin-bottom: 2px;">Upper</span>
-                            <span style="font-size: 1rem; font-weight: var(--font-medium);">$209.91</span>
+                                style="font-size: 0.8rem;
+
+ color: var(--text-lighter); margin-bottom: 2px;">Upper</span>
+                            <span style="font-size: 1rem; font-weight: var(--font-medium);">$237.65</span>
                         </div>
                         <div
                             style="display: flex; flex-direction: column; align-items: center; background-color: var(--card-highlight); padding: var(--spacing-sm); border-radius: var(--border-radius-sm);">
                             <span
                                 style="font-size: 0.8rem; color: var(--text-lighter); margin-bottom: 2px;">Middle</span>
-                            <span style="font-size: 1rem; font-weight: var(--font-medium);">$187.00</span>
+                            <span style="font-size: 1rem; font-weight: var(--font-medium);">$200.87</span>
                         </div>
                         <div
                             style="display: flex; flex-direction: column; align-items: center; background-color: var(--card-highlight); padding: var(--spacing-sm); border-radius: var(--border-radius-sm);">
@@ -1035,22 +1014,8 @@
             </div>
 
             <div class="content-section">
-                <h3>AI Investment and Growth</h3>
-                <p>Amazon is making substantial investments in AI technology and infrastructure, with plans to spend approximately <strong>$100 billion in 2025</strong>. AI integration across e-commerce, AWS, and logistics is expected to drive efficiency and growth. Partnerships, such as with Clario for healthcare AI, demonstrate Amazon's expanding AI ecosystem.</p>
-                <div class="source-citation">
-                    <svg class="source-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 9.5V15.5M12 7.5V7.51M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span class="source-text">Analyst Reports, April 2025</span>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <h3>AWS Performance</h3>
-                <p>AWS remains the market leader in cloud infrastructure with approximately <strong>31% global market share</strong>. The cloud division is Amazon's primary profit driver, with offerings like Amazon Bedrock and SageMaker positioning the company well in the growing AI platform space.</p>
+                <h3>AI Investment & Growth</h3>
+                <p>Amazon is investing ~$100 billion in AI infrastructure in 2025, positioning AWS to capture significant market share in AI workloads. CEO Andy Jassy describes AI as a "once-in-a-lifetime reinvention."</p>
                 <div class="source-citation">
                     <svg class="source-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -1063,8 +1028,22 @@
             </div>
 
             <div class="content-section">
+                <h3>Strong Financial Performance</h3>
+                <p>Recent earnings show strength in AWS and advertising, with expanding profit margins and strong cash flow generation, supporting Amazon's financial resilience.</p>
+                <div class="source-citation">
+                    <svg class="source-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 9.5V15.5M12 7.5V7.51M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="source-text">Recent Earnings Reports</span>
+                </div>
+            </div>
+
+            <div class="content-section">
                 <h3>Tariff Concerns</h3>
-                <p>Proposed tariffs could impact Amazon's third-party marketplace and supply chain. However, analysts suggest the impact may be overblown as AWS and advertising businesses would be minimally affected, and Amazon's scale provides advantages over competitors like Shein and Temu.</p>
+                <p>New tariffs, including a 145% tariff on Chinese imports, pose a short-term headwind for Amazon's e-commerce business, though its diversified supply chain and service-based revenue mitigate the impact.</p>
                 <div class="source-citation">
                     <svg class="source-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -1082,17 +1061,17 @@
                     <li style="display: flex; margin-bottom: var(--spacing-sm); align-items: baseline;">
                         <span
                             style="color: var(--primary-color); margin-right: var(--spacing-sm); font-size: 1.2rem;">•</span>
-                        <span><strong>April 2025:</strong> Announcement of $100B AI infrastructure investment for 2025</span>
-                    </li>
-                    <li style="display: flex; margin-bottom: var(--spacing-sm); align-items: baseline;">
-                        <span
-                            style="color: var(--primary-color); margin-right: var(--spacing-sm); font-size: 1.2rem;">•</span>
-                        <span><strong>April 2025:</strong> Partnership with Clario for healthcare AI applications</span>
+                        <span><strong>April 2025:</strong> Amazon announces $100B AI investment plan for 2025</span>
                     </li>
                     <li style="display: flex; margin-bottom: var(--spacing-sm); align-items: baseline;">
                         <span
                             style="color: var(--sell-color); margin-right: var(--spacing-sm); font-size: 1.2rem;">•</span>
-                        <span><strong>April 2025:</strong> Stock correction of 20-25% from recent all-time highs</span>
+                        <span><strong>April 2025:</strong> New 145% tariff on Chinese imports announced</span>
+                    </li>
+                    <li style="display: flex; margin-bottom: var(--spacing-sm); align-items: baseline;">
+                        <span
+                            style="color: var(--primary-color); margin-right: var(--spacing-sm); font-size: 1.2rem;">•</span>
+                        <span><strong>March 2025:</strong> Partnership with Anthropic to enhance AI capabilities</span>
                     </li>
                 </ul>
             </div>
@@ -1112,11 +1091,11 @@
                     Strengths
                 </div>
                 <ul class="swot-list">
-                    <li><strong>AWS Leadership:</strong> 31% global market share in cloud computing</li>
-                    <li><strong>Financial Health:</strong> Strong cash position and balance sheet</li>
-                    <li><strong>AI Investments:</strong> $100B planned for AI infrastructure in 2025</li>
-                    <li><strong>Advertising Growth:</strong> Fast-growing high-margin business</li>
-                    <li><strong>Scale Advantage:</strong> Robust logistics and supply chain capabilities</li>
+                    <li><strong>Market Leadership:</strong> Dominant in e-commerce and cloud computing</li>
+                    <li><strong>Revenue Diversification:</strong> High-margin AWS and advertising segments</li>
+                    <li><strong>Financial Health:</strong> Strong cash flow and balance sheet</li>
+                    <li><strong>Customer Loyalty:</strong> Customer-centric approach drives repeat business</li>
+                    <li><strong>Innovation:</strong> Technological advancements across business units</li>
                 </ul>
             </div>
 
@@ -1132,10 +1111,10 @@
                     Weaknesses
                 </div>
                 <ul class="swot-list">
-                    <li><strong>E-commerce Saturation:</strong> Mature markets showing growth deceleration</li>
-                    <li><strong>AI CapEx:</strong> Heavy investments may pressure short-term margins</li>
-                    <li><strong>Regulatory Scrutiny:</strong> Ongoing antitrust concerns globally</li>
-                    <li><strong>Tariff Exposure:</strong> Potential impact on third-party marketplace</li>
+                    <li><strong>Tariff Exposure:</strong> E-commerce supply chain disruptions</li>
+                    <li><strong>High CapEx:</strong> Significant infrastructure investments</li>
+                    <li><strong>Regulatory Scrutiny:</strong> Increasing oversight in multiple markets</li>
+                    <li><strong>Margin Pressure:</strong> Competitive segments may impact profitability</li>
                 </ul>
             </div>
 
@@ -1151,11 +1130,11 @@
                     Opportunities
                 </div>
                 <ul class="swot-list">
-                    <li><strong>AI Integration:</strong> Enhanced personalization and new AWS services</li>
-                    <li><strong>International Expansion:</strong> Growth potential in emerging markets</li>
-                    <li><strong>Healthcare Ventures:</strong> Expansion through Amazon Pharmacy</li>
-                    <li><strong>Project Kuiper:</strong> Satellite internet to compete with Starlink</li>
-                    <li><strong>Margin Expansion:</strong> Shift to high-margin businesses</li>
+                    <li><strong>AI Growth:</strong> AWS expansion in AI infrastructure</li>
+                    <li><strong>Advertising:</strong> High-margin advertising business growth</li>
+                    <li><strong>International Markets:</strong> Expansion in emerging economies</li>
+                    <li><strong>Healthcare:</strong> Long-term potential in healthcare initiatives</li>
+                    <li><strong>Autonomous Tech:</strong> Development of Zoox and delivery systems</li>
                 </ul>
             </div>
 
@@ -1171,10 +1150,11 @@
                     Threats
                 </div>
                 <ul class="swot-list">
-                    <li><strong>Cloud Competition:</strong> Microsoft Azure and Google Cloud gaining share</li>
-                    <li><strong>Economic Slowdown:</strong> Potential impact on consumer spending</li>
-                    <li><strong>Tariff Implementation:</strong> Risks to supply chain and marketplace</li>
-                    <li><strong>International Risks:</strong> Geopolitical tensions and competition</li>
+                    <li><strong>Trade Tensions:</strong> Impact of tariffs on e-commerce</li>
+                    <li><strong>Economic Headwinds:</strong> Reduced consumer spending</li>
+                    <li><strong>Competition:</strong> Intense competition in cloud services</li>
+                    <li><strong>Regulatory Risks:</strong> Challenges in multiple jurisdictions</li>
+                    <li><strong>Supply Chain:</strong> Disruptions and increased costs</li>
                 </ul>
             </div>
         </div>
@@ -1187,7 +1167,7 @@
                         Buy
                     </div>
                     <div class="recommendation-points">
-                        <p>Amazon presents a compelling buying opportunity at current levels due to its attractive valuation and strong fundamentals.</p>
+                        <p>Amazon presents a compelling buying opportunity for long-term investors willing to tolerate near-term volatility.</p>
                     </div>
                 </div>
                 <div>
@@ -1205,11 +1185,13 @@
                             Buy Rationale
                         </div>
                         <ul class="reasons-list">
-                            <li>Technical indicators suggest oversold conditions with RSI at 37.94</li>
-                            <li>Price trading near lower Bollinger Band ($164.09), indicating potential rebound</li>
-                            <li>AWS leadership with 31% market share and strong growth in AI-driven cloud services</li>
-                            <li>$100B AI investment positions Amazon for significant growth</li>
-                            <li>Attractive valuation with 30-50% upside potential per analysts</li>
+                            <li>Attractive valuation: 20-25% correction from recent highs</li>
+                            <li>Strong financials with expanding profit margins</li>
+                            <li>AI leadership with $100B investment in 2025</li>
+                            <li>Revenue diversification via AWS and advertising</li>
+                            <li>Technical indicators suggest potential stabilization</li>
+                            <li>Smart money conviction from top investors</li>
+                            <li>Analyst upside potential of 40-50%</li>
                         </ul>
                     </div>
 
@@ -1220,17 +1202,17 @@
                                 <path
                                     d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                     stroke="#303030" stroke-width="1.5" />
-                                <path d="M12 8V13M12 16V16.5" stroke="#303030" stroke-width="1.5"
+                                <path d="M12 16V12M12 8H12.01" stroke="#303030" stroke-width="1.5"
                                     stroke-linecap="round" />
                             </svg>
                             Investment Strategy
                         </div>
                         <ul class="reasons-list">
-                            <li>Establish or add to positions during current market correction</li>
-                            <li>Monitor support at lower Bollinger Band ($164.09)</li>
-                            <li>Watch for AI and AWS growth catalysts in upcoming quarters</li>
-                            <li>Assess tariff developments but prioritize long-term fundamentals</li>
-                            <li>Hold for long-term growth in AI, cloud, and high-margin segments</li>
+                            <li>Consider current price as an attractive entry point</li>
+                            <li>Monitor tariff developments and economic conditions</li>
+                            <li>Watch for stabilization near lower Bollinger Band ($164.09)</li>
+                            <li>Track AI investment progress and AWS growth</li>
+                            <li>Prepare for short-term volatility due to macro concerns</li>
                         </ul>
                     </div>
                 </div>
@@ -1249,11 +1231,11 @@
                                 d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                 stroke="#FF5000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        Tariff Implementation
+                        Trade Tensions & Tariffs
                     </div>
                     <div class="risk-level risk-high">High</div>
                 </div>
-                <p>Proposed tariffs could negatively impact Amazon's third-party seller ecosystem and supply chain. While AWS and advertising are minimally affected, the e-commerce segment faces risks from increased costs and supply chain disruptions.</p>
+                <p>New tariffs, including a 145% tariff on Chinese imports, could disrupt Amazon's e-commerce supply chain and increase costs, though diversified revenue mitigates some impact.</p>
             </div>
 
             <div class="card risk-card">
@@ -1266,11 +1248,11 @@
                                 d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                 stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        Cloud Competition
+                        Economic Uncertainty
                     </div>
                     <div class="risk-level risk-medium">Medium</div>
                 </div>
-                <p>Microsoft Azure and Google Cloud are gaining market share in cloud computing. While AWS remains the leader, increased competition could pressure growth rates and margins in this critical segment.</p>
+                <p>Macroeconomic headwinds and consumer spending pullbacks could impact Amazon's e-commerce revenue, though high-margin segments provide some resilience.</p>
             </div>
 
             <div class="card risk-card">
@@ -1283,17 +1265,17 @@
                                 d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                 stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        Regulatory Scrutiny
+                        Competitive Pressures
                     </div>
                     <div class="risk-level risk-medium">Medium</div>
                 </div>
-                <p>Ongoing antitrust concerns in the US and internationally pose risks to Amazon's operations. Regulatory actions could limit growth strategies or impose fines, impacting financial performance.</p>
+                <p>Intense competition in cloud services from Microsoft and Google could challenge AWS's market share, requiring continued heavy investment.</p>
             </div>
         </div>
 
         <div class="footer">
             <div class="footer-left">
-                Analysis Date: April 17, 2025 | Data Sourced from: OptiTrade-AI
+                Analysis Date: April 18, 2025 | Data Sourced from: OptiTrade-AI
             </div>
             <div class="footer-right">
                 <img class="footer-logo" src="/stock-analysis/icons/amazon-icon.png" alt="AMZN Logo">
