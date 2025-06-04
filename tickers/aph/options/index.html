@@ -555,6 +555,28 @@
             font-style: italic;
         }
 
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-lighter);
+        }
+        
+        .footer-logo {
+            width: 30px; /* Set a smaller, fixed width for the logo */
+            height: auto; /* Maintain aspect ratio */
+            vertical-align: middle; /* Align with text */
+            margin-right: var(--spacing-sm); /* Space between logo and text */
+        }
+        
+        .footer-right {
+            display: flex;
+            align-items: center; /* Ensure logo and text are vertically aligned */
+        }
+
         @media (max-width: 1000px) {
             .metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
